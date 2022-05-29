@@ -1,2 +1,2 @@
 # Interfacial-Tension-in-Ternary-Systems
-Estimates Interfacial Tension in Ternary systems using Li-Fu equation
+https://share.streamlit.io/sonti974948/interfacial-tension-in-ternary-systems/main/Intten.py
