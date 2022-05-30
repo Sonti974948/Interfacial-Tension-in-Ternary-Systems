@@ -147,6 +147,24 @@ for i in range(5):
 
 error=-(sig_exp-sigma)/sigma*100
 
+if code[0]==1 and Texp==298:
+            fn1='NBA_298_int.png'
+            
+elif code[0]==1 and Texp==303:
+            fn1='NBA_303_int.png'
+            
+elif code[0]==1 and Texp==308:
+            fn1='NBA_308_int.png'
+            
+elif code[0]==2 and Texp==298:
+            fn1='IPA_298_int.png'
+            
+elif code[0]==2 and Texp==303:
+            fn1='IPA_303_int.png'
+            
+elif code[0]==2 and Texp==308:
+            fn1='IPA_308_int.png'
+            
 
 fig2,ax2=plt.subplots()
 ax2.plot(conc_AcAaq,sig_exp,'o'),
@@ -167,6 +185,14 @@ plt.title('Interfacial Tension vs mol fraction of acetic acid',pad=2)
 
 st.pyplot(fig2)
 
+plt.savefig(fn1,bbox_inches='tight')
+with open(fn1, "rb") as img:
+    btn = st.download_button(
+        label="Download as image",
+        data=img,
+        file_name=fn1,
+        mime="image/png"
+    )
 with st.expander(label="Raw data of Interfacial Tension [mN/m] (error in %)"):
     for i in range(5):
         cols=st.columns(3)
