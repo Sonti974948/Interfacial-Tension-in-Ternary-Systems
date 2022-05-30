@@ -167,8 +167,8 @@ elif code[0]==2 and Texp==308:
             
 
 fig2,ax2=plt.subplots()
-ax2.plot(conc_AcAaq,sig_exp,'o'),
-ax2.plot(conc_AcAaq,sigma,'-')
+ax2.plot(conc_AcAaq,sig_exp,'ko'),
+ax2.plot(conc_AcAaq,sigma,'k-')
 ax2.legend(['GROMACS', "Li-Fu"], bbox_to_anchor=(1.8, 1), ncol=2)
 plt.xlabel("Mole fraction of AcA in aqueous phase")
 plt.ylabel("Interfacial Tension ($ mN \, m^{-1}$)")
